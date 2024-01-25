@@ -2,9 +2,9 @@
 
 namespace CarsApp
 {
-    public abstract class Cars
+    public class Cars
     {
-        public Cars(string mark, string model, string bodytype, string yearofproduction)
+        public Cars (string mark, string model, string bodytype, string yearofproduction)
         {
             this.Mark = mark;
             this.Model = model;
@@ -17,7 +17,6 @@ namespace CarsApp
 
         public string BodyType { get; private set; }
         public string YearOfProduction { get; private set; }
-
     }
 }
 

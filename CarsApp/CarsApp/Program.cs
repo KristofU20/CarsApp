@@ -5,6 +5,7 @@ using CarsApp;
 Console.WriteLine("Witaj w aplikacji CarsApp służącej do oceny aut");
 Console.WriteLine("===========================================");
 Console.WriteLine();
+Console.WriteLine("Podaj ocene samochodu");
 
 var cars = new CarsInFile("Opel", "Corsa", "Hatchback", "2000");
 cars.GradeAdded += CarsGradeAdded;
@@ -17,7 +18,7 @@ void CarsGradeAdded(object sender, EventArgs args)
 
 while (true)
 {
-    Console.WriteLine("Podaj kolejną  ocenę auta: ");
+   
     var input = Console.ReadLine();
     if (input == "q")
     {
