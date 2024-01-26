@@ -7,13 +7,13 @@ namespace CarsApp.Tests
     {
       
         [Test]
-        public void DisplayAverage()
+        public void GiveMeAverage()
         {
             var cars = new CarsInMemory("Opel", "Corsa", "Hatchback", "2000");
 
             cars.AddGrade(30);
             cars.AddGrade(29);
-            cars.AddGrade(50);
+            cars.AddGrade(40);
 
             var result = cars.GetStatistics();
 
@@ -21,8 +21,21 @@ namespace CarsApp.Tests
 
         }
 
+        [Test]
+        public void GiveMeMin()
+        {
+            var cars = new CarsInMemory("Opel", "Corsa", "Hatchback", "2000");
 
-        
+            cars.AddGrade(35);
+            cars.AddGrade(79);
+            cars.AddGrade(60);
+
+            var result = cars.GetStatistics();
+
+            Assert.That(result.Min, Is.EqualTo(35));
+
+        }
+
 
     }
 }
