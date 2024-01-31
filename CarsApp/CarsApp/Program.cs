@@ -8,8 +8,8 @@ Console.WriteLine();
 Console.WriteLine("Jeśli chcesz dostać statystki, wprowadz'q'");
 Console.WriteLine("Podaj ocene samochodu");
 
-var cars = new CarsInMemory("Opel", "Corsa", "Hatchback", "2000");
-cars.GradeAdded += CarsGradeAdded;
+var car = new CarInFile("Opel", "Corsa", "Hatchback", "2000");
+car.GradeAdded += CarsGradeAdded;
 
 void CarsGradeAdded(object sender, EventArgs args)
 {
@@ -27,7 +27,7 @@ while (true)
 
     try
     {
-        cars.AddGrade(input);
+        car.AddGrade(input);
     }
     catch (Exception e)
     {
@@ -35,7 +35,7 @@ while (true)
     }
 }
 
-var statistics = cars.GetStatistics();
+var statistics = car.GetStatistics();
 Console.WriteLine($"Average: {statistics.Average}");
 Console.WriteLine($"Min:  {statistics.Min}");
 Console.WriteLine($"Max:  {statistics.Max}");
