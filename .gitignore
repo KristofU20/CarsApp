@@ -396,3 +396,11 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/CarsApp/CarsApp/Cars.cs
+/CarsApp/CarsApp/CarsBase.cs
+/CarsApp/CarsApp/CarsInFile.cs
+/CarsApp/CarsApp/CarsInMemory.cs
+/CarsApp/CarsApp/ICars.cs
+/CarsApp/CarsApp.Tests/CarsTests.cs
+/CarsApp/CarsApp/CarsBase.cs
+/CarsApp/CarsApp/CarsInFile.cs
